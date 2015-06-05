@@ -1,8 +1,6 @@
-//*
-// wrong answer
-///
 #define MAXN	512
 #include <stdio.h>
+#include <strings.h>
 
 static int	res;
 static char	m[MAXN][MAXN];
@@ -34,13 +32,15 @@ static int avail(int n, int lev)
 			if (!m[i][j])
 				continue;
 			for (k = i + 1, l = j - 1;
-					k >= lev && l >= 0; k++, l--)
+					k <= lev && l >= 0; k++, l--) {
 				if (m[k][l])
 					return(0);
+			}
 			for (k = i + 1, l = j + 1;
-					k >= lev && l < n; k++, l++)
+					k <= lev && l < n; k++, l++) {
 				if (m[k][l])
 					return(0);
+			}
 		}
 	}
 	return(1);
@@ -68,7 +68,6 @@ static void nqueen(int n, int lev)
 		m[lev][i] = 1;
 		if (avail(n, lev)) {
 			res++;
-			print_m(n);
 		}
 		m[lev][i] = 0;
 		return;
