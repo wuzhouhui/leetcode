@@ -1,8 +1,8 @@
 /*
  * time limit exceeded
- * s = "aaabbbaabaaaaababaabaaabbabbbbbbbbaabababbabbbaaaaba"
- * p = "a*******b"
  */
+#include <string.h>
+
 #ifndef bool 
 #define bool int 
 #endif
@@ -10,6 +10,7 @@
 bool isMatch(char *s, char *p)
 {
 	int	i;
+	int	slen, plen;
 
 	if (!s) {
 		if (!p || !p[0])
@@ -20,6 +21,13 @@ bool isMatch(char *s, char *p)
 		if (!s || !s[0])
 			return(1);
 		else 
+			return(0);
+	}
+
+	slen = strlen(s);
+	plen = strlen(p);
+	for (i = slen - 1; i >= 0; i--) {
+		if (p[i] != '?' && p[i] != '*' && p[i] != s[i])
 			return(0);
 	}
 
