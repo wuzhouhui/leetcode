@@ -1,6 +1,3 @@
-/*
- * wrong answer
- */
 #include <stdlib.h>
 #include <string.h>
 

@@ -1,6 +1,3 @@
-/*
- * untested
- */
 #include <stdlib.h>
 
 struct TreeNode {

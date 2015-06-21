@@ -1,6 +1,3 @@
-/*
- * wrong answer.
- */
 #include <stdlib.h>
 
 #define STEP 8

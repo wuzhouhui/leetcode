@@ -1,6 +1,3 @@
-/*
- * wrong answer.
- */
 import java.util.*;
 
 class Solution {

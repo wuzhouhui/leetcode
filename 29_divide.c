@@ -1,6 +1,3 @@
-/*
- * wrong answer.
- */
 #include <limits.h>
 
 int divide(int dividend, int divisor)
