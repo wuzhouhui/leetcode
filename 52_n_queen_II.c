@@ -101,6 +101,6 @@ int totalNQueens(int n)
 
 int main(void)
 {
-	printf("%d\n", totalNQueens(5));
+	printf("%d\n", totalNQueens(4));
 	return(0);
 }
